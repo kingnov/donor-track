@@ -1,10 +1,14 @@
 function Hero() {
   return (
     <div>
-      <div className="bg-[url('assets/images/upperHero.jpg')] bg-no-repeat  shrink-0">
-        <h1>A Little Care Can Change the World</h1>
-        <button>Start a Fundraising</button>
-        <p>For Individuals and charities. No startup fees. No hidden fees.</p>
+      <div className="bg-[url('assets/images/upperHero.jpg')] bg-no-repeat w-[100%] h-[70vh] bg-center bg-cover  ">
+        <div className="mt-4 text-[#fff] items-center flex flex-col">
+          <h1>A Little Care Can Change the World</h1>
+          <button className="p-2 text-[#317f67] py-4 w-[40%] mx-auto  px-14 font-bold rounded-full shadow-[0_0_4px_rgba(128,128,128)] text-2xl font-semibold mt-5 mb-10">
+            Start a Fundraising
+          </button>
+          <p>For Individuals and charities. No startup fees. No hidden fees.</p>
+        </div>
       </div>
       <div></div>
       <div>
@@ -30,4 +34,4 @@ function Hero() {
     </div>
   );
 }
-export default Hero
+export default Hero;

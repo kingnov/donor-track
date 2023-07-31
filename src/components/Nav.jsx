@@ -3,7 +3,7 @@ import React from "react";
 
 function Nav() {
   return (
-    <nav className="container mx-auto flex justify-between capitalize">
+    <nav className=" flex justify-between capitalize py-6 px-4 ">
       <h1>LOGO</h1>
       <div>
         <ul className="flex gap-8 justify-between items-center p-2">
