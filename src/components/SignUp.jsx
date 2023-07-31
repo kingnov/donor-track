@@ -2,9 +2,7 @@ import Google from "../assets/images/google.png";
 
 
 function SignUp() {
-  return (
-    
-    <div className="bg-[ linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('assets/images/upperHero.png')]  bg-no-repeat bg-cover h-[80vh]">
+  return (    <div className="bg-[ linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('assets/images/upperHero.jpg')]  bg-no-repeat bg-cover h-[80vh]">
       <div className="w-[50%] text-center p-5 mx-auto ">
         <h1 className="text-4xl font-bold my-8 ">Create An Account</h1>
         <form action="" className="flex flex-col">
@@ -81,9 +79,9 @@ function SignUp() {
             </button>
           </div>
         </div>
-        <p className="my-6">
+        <p className="my-6 text-white">
           Already have an account yet?{" "}
-          <span className="text-[#45c9a1]">Sign In</span>
+          <span className="text-[#317F67]">Sign In</span>
         </p>
       </div>
      

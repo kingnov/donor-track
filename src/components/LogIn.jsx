@@ -40,7 +40,7 @@ function LogIn() {
           </div>
           <button
             
-            className="bg-[#45c9a1] rounded-full py-6 px-6 text-white text-2xl font-weight"
+            className="bg-[#317F67] rounded-full py-6 px-6 text-white text-2xl font-weight"
           >
             Sign in
           </button>
