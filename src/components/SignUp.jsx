@@ -31,10 +31,10 @@ function SignUp() {
     
 
 
-  return (    <div className="bg-[ linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('assets/images/upperHero.jpg')]  bg-no-repeat bg-cover h-[80vh]">
+  return (    <div className="bg-[linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('assets/images/upperHero.jpg')]  bg-no-repeat bg-cover h-[50%]">
       <div className="w-[50%] text-center p-5 mx-auto ">
         <h1 className="text-4xl font-bold my-8 ">Create An Account</h1>
-        <form action="" className="flex flex-col">
+        <form action="" className="flex flex-col w-[50vw]">
           <div className="flex justify-between my-8">
             <div>
             {error.firstName && (
@@ -82,10 +82,10 @@ function SignUp() {
               onChange={(e) => handleChange(e)}
               name="phoneNumber"
             />
-            <div className="flex border-2 items-center rounded-full py-4 px-6 ">
             {error.firstName && (
                 <p className="text-red-500">{error.firstName}</p>
               )}
+            <div className="flex border-2 items-center rounded-full py-4 px-6  bg-white">
               <input
                 type="pas"
                 placeholder="Password"
@@ -93,10 +93,10 @@ function SignUp() {
                 name="passWord"
               />
             </div>
-            <div className="flex border-2 items-center rounded-full py-4 px-6 ">
             {error.firstName && (
                 <p className="text-red-500">{error.firstName}</p>
               )}
+            <div className="flex border-2 items-center rounded-full py-4 px-6  bg-white">
               <input
                 type="password"
                 placeholder="Confirm your password"
@@ -107,6 +107,7 @@ function SignUp() {
           </div>
           <div className="flex my-8 justify-between"></div>
           <button
+           onClick={(e) => handleSignUp(e)}
             className="bg-teal-500 rounded-full py-4 px-2 text-white text-2xl font-bold"
           >
             Sign in
@@ -114,14 +115,14 @@ function SignUp() {
         </form>
         <div className="flex items-center my[1em]">
           <div className="flex-grow h-px bg-slate-400"> </div>
-          <p className="my-6">OR</p>
+          <p className="my-6 text-white">OR</p>
           <div className="flex-grow h-px bg-slate-400"> </div>
         </div>
         <div className="flex items-center gap-8 my-8 justify-center">
           <div>
             <button className="py-4 px-2 my-5 border-2 border-grey-400 gap-4 flex items-center rounded-full w-{70%} text-3xl text-sky-600 font-bold">
               <img src={Google} alt="" width={50} />
-              onChange={(e) => handleChange(e)}
+              
               <div className="text-3xl text-blue-500 font-bold" >
                 <p>Sign In With Google</p>
               </div>
