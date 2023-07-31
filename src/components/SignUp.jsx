@@ -50,7 +50,7 @@ function SignUp() {
             </div>
             <div>
             {error.firstName && (
-                <p className="text-red-500">{error.firstName}</p>
+                <p className="text-red-500">{error.lastName}</p>
               )}
               <input
                 type="text"
@@ -63,7 +63,7 @@ function SignUp() {
           </div>
           <div className="flex flex-col gap-8">
           {error.firstName && (
-                <p className="text-red-500">{error.firstName}</p>
+                <p className="text-red-500">{error.emailAddress}</p>
               )}
             <input
               type="email"
@@ -73,7 +73,7 @@ function SignUp() {
               name="emailAddress"
             />
              {error.firstName && (
-                <p className="text-red-500">{error.firstName}</p>
+                <p className="text-red-500">{error.phoneNumber}</p>
               )}
             <input
               type="text"
@@ -83,7 +83,7 @@ function SignUp() {
               name="phoneNumber"
             />
             {error.firstName && (
-                <p className="text-red-500">{error.firstName}</p>
+                <p className="text-red-500">{error.passWord}</p>
               )}
             <div className="flex border-2 items-center rounded-full py-4 px-6  bg-white">
               <input
@@ -94,7 +94,7 @@ function SignUp() {
               />
             </div>
             {error.firstName && (
-                <p className="text-red-500">{error.firstName}</p>
+                <p className="text-red-500">{error.passWord}</p>
               )}
             <div className="flex border-2 items-center rounded-full py-4 px-6  bg-white">
               <input

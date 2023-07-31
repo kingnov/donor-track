@@ -1,6 +1,23 @@
 import Google from "../assets/images/google.png";
+import { useState } from "react";
 
 function LogIn() {
+    const [logData, setLogData] = useState({});
+    const [error, setError] = useState({});
+    const handleChange = (e) => {
+      setLogData({ ...logData, [e.target.name]: e.target.value });
+    };
+    function handleLogIn(e) {
+        e.preventDefault();
+        const errors = {};
+        (logData.emailAddress === "" || logData.emailAddress === undefined) &&
+          (errors.emailAddress = "please enter your emailAddress");
+        (logData.passWord === "" || logData.passWord === undefined) &&
+          (errors.passWord = "please enter your passWord");
+    
+        setError(errors);
+        console.log(errors);
+      }
   
 
 
@@ -11,18 +28,24 @@ function LogIn() {
         <h1 className="text-4xl font-bold my-8">Log in to your account</h1>
         <form action="" className="flex flex-col">
           <div className="flex flex-col gap-8">
-        
+          {error.emailAddress && (
+              <p className="text-red-500">{error.emailAddress}</p>
+            )}
             <input
               name="emailAddress"
-        
+              onChange={(e) => handleChange(e)}
               type="email"
               placeholder="EmailAddress"
               className="rounded-full py-4 px-6 border-2 border-gray-300"
             />
         
             <div className="flex border-2 items-center rounded-full py-4 px-6 bg-white ">
+            {error.emailAddress && (
+              <p className="text-red-500">{error.passWord}</p>
+            )}
             <input
               name="passWord"
+              onChange={(e) => handleChange(e)}
               type="password"
               placeholder="Password"
               className="outline-none w-[100%] "
@@ -39,7 +62,7 @@ function LogIn() {
             </div>
           </div>
           <button
-            
+            onClick={(e) => handleLogIn(e)}
             className="bg-[#317F67] rounded-full py-6 px-6 text-white text-2xl font-weight"
           >
             Sign in
