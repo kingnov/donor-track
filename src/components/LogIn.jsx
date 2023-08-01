@@ -68,19 +68,19 @@ function LogIn() {
             Sign in
           </button>
         </form>
-        <div className="flex items-center my[1em]">
+        {/* <div className="flex items-center my[1em]">
           <div className="flex-grow h-px bg-slate-400"> </div>
           <p className="my-6">OR</p>
           <div className="flex-grow h-px bg-slate-400"> </div>
-        </div>
-        <div className="flex items-center gap-8 my-8 justify-centern border-2 border-grey-400 rounded-full bg-white">
+        </div> */}
+        {/* <div className="flex items-center gap-8 my-8 justify-centern border-2 border-grey-400 rounded-full bg-white">
           <div>
             <img src={Google} alt="" width={50} />
           </div>
           <div className="text-3xl text-blue-500 font-bold">
             <p>Log In With Google</p>
           </div>
-        </div>
+        </div> */}
         <p className="my-6 text-white">
           Don't have an account yet?{" "}
           <span className="text-[#5eebc1] ">Sign Up free</span>

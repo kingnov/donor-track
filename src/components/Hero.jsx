@@ -1,4 +1,4 @@
-import { FcCheckmark } from "react-icons/fc";
+
 import org from "../assets/images/org.jpeg";
 import check from "../assets/images/check.png";
 import muliro from "../assets/images/muliro.jpg";

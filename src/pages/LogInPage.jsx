@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import LogIn from "../components/LogIn";
 import Nav from "../components/Nav";
 
@@ -6,6 +7,7 @@ function LogInPage(){
         <div>
             <Nav />
             <LogIn/>
+            <Footer/>
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import Nav from "../components/Nav"  
 import SignUp from "../components/SignUp"
+import Footer from "../components/Footer"
 
 
 function SignUpPage(){
@@ -7,6 +8,7 @@ function SignUpPage(){
         <div>
          <Nav/>
          <SignUp />
+         <Footer/>
         </div>
     )
 }
