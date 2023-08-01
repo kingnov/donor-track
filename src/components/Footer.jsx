@@ -29,13 +29,13 @@ function Footer() {
       <div className=" container mx-auto flex gap-56">
         <div className="w-60">
           <p>
-            All rights reserved. The content and
-            materials on this website, including but not limited to text,
-            images, graphics, logos, and v are the property of [Donor-Track] and
-            are protected by copyright laws.
+            All rights reserved. The content and materials on this website,
+            including but not limited to text, images, graphics, logos, and v
+            are the property of [Donor-Track] and are protected by copyright
+            laws.
           </p>
         </div>
-        
+
         <div>
           <ul>
             <li>
@@ -96,7 +96,14 @@ function Footer() {
           </div>
         </div>
       </div>
-        <p className="text-center">Copyright © 2023 [Donor-Track].</p>
+      <div className="flex">
+      <p>
+        <link rel="stylesheet" href="" />
+        Privacy Policy Terms of Use
+      </p>
+      <h1> <img className="w-[80px]" src={logo} /></h1>
+      <p className="text-center">Copyright © 2023 [Donor-Track].</p>
+      </div>
     </div>
   );
 }
