@@ -1,9 +1,6 @@
 import Google from "../assets/images/google.png";
 import { useState } from "react";
-
-
 function SignUp() {
-    const [show, setShow] = useState([false]);
     const [formData, setFormData] = useState({});
     const [error, setError] = useState({});
     const handleChange = (e) => {
@@ -22,6 +19,9 @@ function SignUp() {
           (errors.phoneNumber = "please enter your phoneNumber");
         (formData.passWord === "" || formData.passWord === undefined) &&
           (errors.passWord = "please enter your passWord");
+          (formData.category === "" || formData.category === undefined) &&
+          (errors.category = "please select your category");
+          
     
         setError(errors);
     
@@ -34,7 +34,7 @@ function SignUp() {
   return (    <div className="bg-[linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('assets/images/upperHero.jpg')]  bg-no-repeat bg-cover h-[50%]">
       <div className="w-[50%] text-center p-5 mx-auto ">
         <h1 className="text-4xl font-bold my-8 ">Create An Account</h1>
-        <form action="" className="flex flex-col w-[50vw]">
+        <form action="" className="flex flex-col">
           <div className="flex justify-between my-8">
             <div>
             {error.firstName && (
@@ -49,7 +49,7 @@ function SignUp() {
               />
             </div>
             <div>
-            {error.firstName && (
+            {error.lastName && (
                 <p className="text-red-500">{error.lastName}</p>
               )}
               <input
@@ -61,7 +61,7 @@ function SignUp() {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-8">
+          <div emailAddress="flex flex-col gap-8">
           {error.firstName && (
                 <p className="text-red-500">{error.emailAddress}</p>
               )}
@@ -72,7 +72,7 @@ function SignUp() {
               onChange={(e) => handleChange(e)}
               name="emailAddress"
             />
-             {error.firstName && (
+             {error.phoneNumber && (
                 <p className="text-red-500">{error.phoneNumber}</p>
               )}
             <input
@@ -82,18 +82,18 @@ function SignUp() {
               onChange={(e) => handleChange(e)}
               name="phoneNumber"
             />
-            {error.firstName && (
+            {error.passWord && (
                 <p className="text-red-500">{error.passWord}</p>
               )}
             <div className="flex border-2 items-center rounded-full py-4 px-6  bg-white">
               <input
-                type="pas"
+                type="password"
                 placeholder="Password"
                 className="outline-none w-[100%]"
                 name="passWord"
               />
             </div>
-            {error.firstName && (
+            {error.passWord&& (
                 <p className="text-red-500">{error.passWord}</p>
               )}
             <div className="flex border-2 items-center rounded-full py-4 px-6  bg-white">
@@ -104,6 +104,23 @@ function SignUp() {
                 onChange={(e) => handleChange(e)}
               />
             </div>
+            {error.passWord&& (
+                <p className="text-red-500">{error.passWord}</p>
+              )}
+            <div className="flex border-2 items-center rounded-full py-4 px-6  bg-white">
+          <select
+            onChange={(e) => handleChange(e)}
+            name="selectCategory"
+            id=""
+            className=" py-4 px-6 border-2 mt-6 w-[50%] outline-none rounded-md
+            border-gray-300"
+            
+          >
+            <option value="">Select Category</option>
+            <option value="donor">Donor</option>
+            <option value="an organization">An Orginazation</option>
+          </select>
+        </div>
           </div>
           <div className="flex my-8 justify-between"></div>
           <button

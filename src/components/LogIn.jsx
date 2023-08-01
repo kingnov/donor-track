@@ -39,10 +39,10 @@ function LogIn() {
               className="rounded-full py-4 px-6 border-2 border-gray-300"
             />
         
-            <div className="flex border-2 items-center rounded-full py-4 px-6 bg-white ">
-            {error.emailAddress && (
+            {error.passWord && (
               <p className="text-red-500">{error.passWord}</p>
             )}
+            <div className="flex border-2 items-center rounded-full py-4 px-6 bg-white ">
             <input
               name="passWord"
               onChange={(e) => handleChange(e)}
@@ -73,7 +73,7 @@ function LogIn() {
           <p className="my-6">OR</p>
           <div className="flex-grow h-px bg-slate-400"> </div>
         </div>
-        <div className="flex items-center gap-8 my-8 justify-center">
+        <div className="flex items-center gap-8 my-8 justify-centern border-2 border-grey-400 rounded-full bg-white">
           <div>
             <img src={Google} alt="" width={50} />
           </div>
