@@ -1,16 +1,14 @@
-import DashboardDetails from "../components/DonorsDashboard/DashboardDetails";
-import Header from "../components/DonorsDashboard/Header";
-import Sidebar from "../components/DonorsDashboard/Sidebar";
+  import Header from "../components/Header";
+  import DashboardDetails from "../components/DashboardDetails";
+  export default function DonarDashboard(){
 
-function DonorDashboard() {
-  return (
-    <div className="flex">
-      <Header/>
-      <div className="flex-1">
-        <Sidebar />
+    return (
+      <div>
+        <Header />
         <DashboardDetails />
       </div>
-    </div>
-  );
-}
-export default DonorDashboard;
+    )
+  }
+  
+
+
