@@ -1,4 +1,3 @@
-
 import org from "../assets/images/org.jpeg";
 import check from "../assets/images/check.png";
 import muliro from "../assets/images/muliro.jpg";
@@ -15,7 +14,7 @@ function Hero() {
           <p className="text-[2rem] font-bold">
             For Individuals and charities. No startup fees. No hidden fees.
           </p>
-          <button className="p-2 text-[#317f67] py-4 w-[40%] mx-auto bg-gray-300 px-14 font-bold rounded-full shadow-[0_0_4px_rgba(128,128,128)] text-2xl font-semibold mt-5 mb-10">
+          <button className="p-2 text-[#317f67] py-4 w-[40%] mx-auto bg-gray-300 px-14 rounded-full shadow-[0_0_4px_rgba(128,128,128)] text-2xl font-semibold mt-5 mb-10">
             Start a Fundraising
           </button>
         </div>
@@ -30,8 +29,8 @@ function Hero() {
           your donors an online giving option for <b />
           the first time, Donar-Track makes it simple for donors to support your
           cause. Our donations forms <b />
-          provide a beautiful avenue to collect donations
-          digitally by helping donors to track their donations.
+          provide a beautiful avenue to collect donations digitally by helping
+          donors to track their donations.
         </p>
       </div>
       <div className="flex container mx-auto h-[50vh]">
@@ -75,7 +74,7 @@ function Hero() {
               </li>
             </ul>
           </div>
-          <button className="p-2 text-[#317f67] py-4 w-[40%] mx-auto  px-14 font-bold  bg-gray-300 rounded-full shadow-[0_0_4px_rgba(128,128,128)] text-2xl font-semibold mt-5 mb-10">
+          <button className="p-2 text-[#317f67] py-4 w-[40%] mx-auto  px-14   bg-gray-300 rounded-full shadow-[0_0_4px_rgba(128,128,128)] text-2xl font-semibold mt-5 mb-10">
             Signup free
           </button>
         </div>

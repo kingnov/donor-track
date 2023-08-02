@@ -21,7 +21,19 @@ function Footer() {
             />
           </div>
           <div>
-            <button className="bg-[#317f67] rounded-full p-5 text-white w-48 font-bold">
+          <button
+              type="submit"
+              className="
+            h-10
+            px-5
+            text-indigo-100
+            bg-green-700
+            rounded-full
+            transition-colors
+            duration-150
+            focus:shadow-outline
+          "
+            >
               Subscribe
             </button>
           </div>
@@ -97,12 +109,11 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex">
+      <div className="flex flex-center gap-10 container mx-auto">
       <p>
         <link rel="stylesheet" href="" />
         Privacy Policy Terms of Use
       </p>
-      <h1> <img className="w-[80px]" src={logo} /></h1>
       <p className="text-center">Copyright © 2023 [Donor-Track].</p>
       </div>
     </div>
