@@ -5,6 +5,7 @@ import SignUpPage from "../pages/SignUpPage";
 import DonorDashboard from "../pages/DonorDashboard";
 import OrgDashboard from "../pages/OrgDashboard";
 import DonationForm from "../components/DonationForm";
+import Qrcode from "./QrCode";
 
 function Router() {
   return (
@@ -16,6 +17,7 @@ function Router() {
         <Route path="/dashboard" element={<DonorDashboard />} />
         <Route path="/orgDashboard" element={<OrgDashboard />} />
         <Route path="/donate/:org" element={<DonationForm />} />
+        <Route path="/qr" element={<Qrcode/>} />
       
 
       </Routes>

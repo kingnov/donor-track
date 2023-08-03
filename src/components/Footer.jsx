@@ -3,7 +3,8 @@ import Phone from "../assets/images/phone.png";
 import Facebook from "../assets/images/facebook.png";
 import Instagram from "../assets/images/instagram.png";
 import Twitter from "../assets/images/twitter.png";
-import logo from "../assets/images/logo1.png"
+import check from "../assets/images/check.png";
+import logo from "../assets/images/logo1.png";
 
 function Footer() {
   return (
@@ -21,7 +22,7 @@ function Footer() {
             />
           </div>
           <div>
-          <button
+            <button
               type="submit"
               className="
             h-10
@@ -54,12 +55,30 @@ function Footer() {
             <li>
               <h3 className="text-2xl py-2">Donation Process</h3>
             </li>
-            <li>Select Your Donation Method</li>
-            <li>Enter Donation Amount</li>
-            <li>Provide Contact Information</li>
-            <li>Make Payment</li>
-            <li>Donation Acknowledgment</li>
-            <li>Tracking Your Donation</li>
+            <li className="flex gap-2 items-center">
+              <img src={check} alt="organisation" className="w-5 h-5" />
+              <span>Select Your Donation Method</span>
+            </li>
+            <li className="flex gap-2 items-center">
+              <img src={check} alt="organisation" className="w-5 h-5" />
+              <span> Enter Donation Amount</span>
+            </li>
+            <li className="flex gap-2 items-center">
+              <img src={check} alt="organisation" className="w-5 h-5" />
+              <span>Provide Contact Information</span>
+            </li>
+            <li className="flex gap-2 items-center">
+              <img src={check} alt="organisation" className="w-5 h-5" />
+              <span>Make Payment</span>
+            </li>
+            <li className="flex gap-2 items-center">
+              <img src={check} alt="organisation" className="w-5 h-5" />
+              <span>Donation Acknowledgment</span>
+            </li>
+            <li className="flex gap-2 items-center">
+              <img src={check} alt="organisation" className="w-5 h-5" />
+              <span>Tracking Your Donation</span>
+            </li>
           </ul>
         </div>
         <div>
@@ -109,13 +128,9 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex flex-center gap-10 container mx-auto">
-      <p>
-        <link rel="stylesheet" href="" />
-        Privacy Policy Terms of Use
-      </p>
-      <p className="text-center">Copyright © 2023 [Donor-Track].</p>
-      </div>
+    
+        <p className="text-center mt-4">Copyright © 2023 [Donor-Track].</p>
+      
     </div>
   );
 }

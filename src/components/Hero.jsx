@@ -2,6 +2,7 @@ import org from "../assets/images/org.jpeg";
 import check from "../assets/images/check.png";
 import muliro from "../assets/images/muliro.jpg";
 import vinny from "../assets/images/vinny.png";
+import Nila from "../assets/images/Nila.jpeg"
 
 function Hero() {
   return (
@@ -91,7 +92,7 @@ function Hero() {
         <div className=" border-2 w-[350px] p-4 bg-white-300">
           <div>
             {" "}
-            <img src={muliro} alt="muliro" className="w-[100%] rounded-full" />
+            <img src={muliro} alt="muliro" className="w-[100%] h-[320px] rounded-full" />
           </div>
           <h3 className="text-center">John Doe - Lead Developer</h3>
           <p className="text-center">
@@ -102,7 +103,7 @@ function Hero() {
         <div className=" border-2 w-[350px] p-4 bg-white-300">
           <div>
             {" "}
-            <img src={muliro} alt="muliro" className="w-[100%] rounded-full" />
+            <img src={vinny} alt="Vinny" className="w-[100%] h-[320px] rounded-full" />
           </div>
           <h3 className="text-center">Jane Smith - UX/UI Designer</h3>
           <p className="text-center">
@@ -113,7 +114,7 @@ function Hero() {
         <div className=" border-2 w-[350px] p-4 bg-white-300">
           <div>
             {" "}
-            <img src={vinny} alt="vinny" className="w-[100%] rounded-full" />
+            <img src={Nila} alt="Nila" className="w-[100%] h-[320px] rounded-full" />
           </div>
 
           <h3 className="text-center">Mike Johnson - Project Manager</h3>

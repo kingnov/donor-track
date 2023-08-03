@@ -1,33 +1,47 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "../assets/images/logo1.png";
+import { Link } from "react-router-dom";
+import AuthenticationButtons, { StateContext } from "../context/State";
+import { useContext } from "react";
 
 function Nav() {
+  const { isLoggedIn, setIsLoggedIn } = useContext(StateContext);
+  // const handleLogout=()=>{
+  //   if(isLoggedIn==="false"){
+  //     setIsLoggedIn(false)
+  //   }
+  // }
+
+  useEffect(() => {
+    let userData = localStorage.getItem("user");
+    if (userData) {
+      setIsLoggedIn(true);
+      console.log(isLoggedIn);
+    }
+  }, []);
+
   return (
     <nav className="flex justify-between capitalize py-2 bg- container mx-auto items-center">
-
       {/* <h1> <img className="w-[100px]" src={logo} /></h1> */}
       <h1>
         {" "}
-        <img className="w-[80px]" src={logo} />
+        <Link to="/"><img className="w-[80px]" src={logo} /></Link>
+        
       </h1>
 
       <div>
-        <ul className="flex gap-8 justify-between items-center p-2">
-          <li>
-            <a href="/">Home</a>
+        <ul className=" flex gap-8 justify-between items-center p-2">
+          <li className="button">
+            <Link to="/"> Home</Link>
           </li>
-          <li>
-            <a href="/login">Login</a>{" "}
-          </li>
-          <li>
-            <a href="/signup">Signup</a>
-          </li>
-          <li>
-            <a href="/#">Logout</a>{" "}
-          </li>
-          <button
-            type="submit"
-            className="
+          {isLoggedIn ? (
+            <>
+              <li className="button">
+                <Link to="/"> Logout</Link>{" "}
+              </li>
+              <button
+                type="submit"
+                className="
             h-10
             px-5
             text-indigo-100
@@ -37,10 +51,20 @@ function Nav() {
             duration-150
             focus:shadow-outline
           "
-          >
-            <a href="/orgDashboard">Go To Dashboard</a>
-            
-          </button>
+              >
+                <Link to="/orgDashboard">Go To Dashboard</Link>
+              </button>
+            </>
+          ) : (
+            <>
+              <li className="button">
+                <Link to="/login">Login</Link>{" "}
+              </li>
+              <li className="button">
+                <Link to="/signup"> Signup</Link>
+              </li>
+            </>
+          )}
         </ul>
       </div>
     </nav>
