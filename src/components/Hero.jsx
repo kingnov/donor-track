@@ -15,7 +15,8 @@ function Hero() {
             For Individuals and charities. No startup fees. No hidden fees.
           </p>
           <button className="p-2 text-[#317f67] py-4 w-[40%] mx-auto bg-gray-300 px-14 rounded-full shadow-[0_0_4px_rgba(128,128,128)] text-2xl font-semibold mt-5 mb-10">
-            Start a Fundraising
+            <a href="/donate/:org">Start a Fundraising</a>
+            
           </button>
         </div>
       </div>
@@ -87,7 +88,7 @@ function Hero() {
         Innovative Minds Coming Together For Donor-Track
       </h2>
       <div className="flex container mx-auto justify-center gap-[5em]">
-        <div className=" border-2 w-[350px] p-4">
+        <div className=" border-2 w-[350px] p-4 bg-white-300">
           <div>
             {" "}
             <img src={muliro} alt="muliro" className="w-[100%] rounded-full" />
@@ -98,7 +99,7 @@ function Hero() {
             reality, one line of code at a time.
           </p>
         </div>
-        <div className=" border-2 w-[350px] p-4">
+        <div className=" border-2 w-[350px] p-4 bg-white-300">
           <div>
             {" "}
             <img src={muliro} alt="muliro" className="w-[100%] rounded-full" />
@@ -109,7 +110,7 @@ function Hero() {
             empathy into intuitive interfaces.
           </p>
         </div>
-        <div className=" border-2 w-[350px] p-4 bg-gray-300">
+        <div className=" border-2 w-[350px] p-4 bg-white-300">
           <div>
             {" "}
             <img src={vinny} alt="vinny" className="w-[100%] rounded-full" />

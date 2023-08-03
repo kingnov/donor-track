@@ -5,7 +5,7 @@ function Nav() {
   return (
     <nav className="flex justify-between capitalize py-2 bg- container mx-auto items-center">
 
-      <h1> <img className="w-[100px]" src={logo} /></h1>
+      {/* <h1> <img className="w-[100px]" src={logo} /></h1> */}
       <h1>
         {" "}
         <img className="w-[80px]" src={logo} />
@@ -38,7 +38,8 @@ function Nav() {
             focus:shadow-outline
           "
           >
-            Go To Dashboard
+            <a href="/orgDashboard">Go To Dashboard</a>
+            
           </button>
         </ul>
       </div>
