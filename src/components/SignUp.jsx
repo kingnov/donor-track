@@ -55,7 +55,7 @@ function SignUp() {
           category: "",
         });
         setSignupError("");
-        navigate("/login");
+        navigate("/login"); 
       })
       .catch((error) => {
         const errorMsg = error.message.substring(22, error.message.length - 2);
