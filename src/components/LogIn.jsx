@@ -1,12 +1,21 @@
 import Google from "../assets/images/google.png";
 import { useState, useRef, useEffect } from "react";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import { app } from "../firebase";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { StateContext } from "../context/State";
+
 
 function LogIn() {
   useEffect(() => {
     emailRef.current.focus();
   }, []);
+  const { isLoggedIn, setIsLoggedIn } = useContext(StateContext);
   const auth = getAuth(app);
   const [logData, setLogData] = useState({});
   const [error, setError] = useState({});
@@ -41,6 +50,12 @@ function LogIn() {
         const errorMsg = error.message.substring(22, error.message.length - 2);
         setLoginError(errorMsg);
       });
+    onAuthStateChanged(auth, (user) => {
+      console.log(user);
+      localStorage.setItem("user", JSON.stringify(user));
+      setIsLoggedIn(true)
+      
+    });
   }
   return (
     <div className="bg-[linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('assets/images/upperHero.jpg')] bg-no-repeat  bg-cover h-[80vh]">
@@ -89,7 +104,7 @@ function LogIn() {
             onClick={(e) => handleLogIn(e)}
             className="bg-[#317F67] rounded-full py-6 px-6 text-white text-2xl font-weight"
           >
-            Sign in
+            <Link to="/orgDashboard"> Sign in</Link>
           </button>
         </form>
 
