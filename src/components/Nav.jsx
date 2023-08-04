@@ -1,16 +1,17 @@
 import React, { useEffect } from "react";
 import logo from "../assets/images/logo1.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthenticationButtons, { StateContext } from "../context/State";
 import { useContext } from "react";
 
 function Nav() {
   const { isLoggedIn, setIsLoggedIn } = useContext(StateContext);
-  // const handleLogout=()=>{
-  //   if(isLoggedIn==="false"){
-  //     setIsLoggedIn(false)
-  //   }
-  // }
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    location.reload()
+    navigate("/");
+  };
 
   useEffect(() => {
     let userData = localStorage.getItem("user");
@@ -25,8 +26,9 @@ function Nav() {
       {/* <h1> <img className="w-[100px]" src={logo} /></h1> */}
       <h1>
         {" "}
-        <Link to="/"><img className="w-[80px]" src={logo} /></Link>
-        
+        <Link to="/">
+          <img className="w-[80px]" src={logo} />
+        </Link>
       </h1>
 
       <div>
@@ -36,7 +38,7 @@ function Nav() {
           </li>
           {isLoggedIn ? (
             <>
-              <li className="button">
+              <li onClick={handleLogout} className="button">
                 <Link to="/"> Logout</Link>{" "}
               </li>
               <button

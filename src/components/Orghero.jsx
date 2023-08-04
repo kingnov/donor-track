@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 import { copyLink } from "../../Helpers";
+import { Link } from "react-router-dom";
 
 function Orghero() {
   const [user, setUser] = useState([]);
@@ -81,21 +82,34 @@ function Orghero() {
               <p>Moses Muliro</p>
               <p>KSh 300000</p>
               <button className="bg-[#15803D] text-white px-3 py-2 rounded-md">
+              <Link to="/orgForm">
                 Use Donation
+                </Link>
               </button>
             </div>
             <div className="flex justify-between border-t-[1px] border-gray-400 py-2">
-              <p>Moses Muliro</p>
+              <p>Neala Achieng</p>
               <p>KSh 300000</p>
               <button className="bg-[#15803D] text-white px-3 py-2 rounded-md">
+              <Link to="/orgForm">
                 Use Donation
+                </Link>
               </button>
             </div>
             <div className="flex justify-between border-t-[1px] border-gray-400 py-2">
-              <p>Moses Muliro</p>
+              <p>Antony Ng'ang'a</p>
               <p>KSh 300000</p>
               <button className="bg-[#15803D] text-white px-3 py-2 rounded-md">
+              <Link to="/orgForm">
                 Use Donation
+                </Link>
+              </button>
+            </div>
+            <div className="flex justify-between border-t-[1px] border-gray-400 py-2">
+              <p>Cynthia Oduor</p>
+              <p>KSh 300000</p>
+              <button className="bg-[#15803D] text-white px-3 py-2 rounded-md">
+                <Link to="/orgForm">Use Donation</Link>      
               </button>
             </div>
           </div>

@@ -15,7 +15,12 @@ import QRCode from "react-qr-code";
 function Qrcode() {
 
   return (
-    <div>
+
+	<div className="flex flex-col items-center">
+<h1 className="text-3xl font-semibold text-center text-[#317f67] underline uppercase decoration-wavy">
+          Scan Qr-Code To Pay
+        </h1>
+    <div className="mt-10">
       <QRCode
         title="title"
         value="value"
@@ -24,6 +29,7 @@ function Qrcode() {
         
       />
     </div>
+	</div>
   );
 }
 
