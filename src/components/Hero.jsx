@@ -2,7 +2,7 @@ import org from "../assets/images/org.jpeg";
 import check from "../assets/images/check.png";
 import muliro from "../assets/images/muliro.jpg";
 import vinny from "../assets/images/vinny.png";
-import Nila from "../assets/images/Nila.jpeg"
+import Nila2 from "../assets/images/Nila2.jpeg"
 
 function Hero() {
   return (
@@ -114,7 +114,7 @@ function Hero() {
         <div className=" border-2 w-[350px] p-4 bg-white-300">
           <div>
             {" "}
-            <img src={Nila} alt="Nila" className="w-[100%] h-[320px] rounded-full" />
+            <img src={Nila2} alt="Nila" className="w-[100%] h-[320px] rounded-full" />
           </div>
 
           <h3 className="text-center">Mike Johnson - Project Manager</h3>

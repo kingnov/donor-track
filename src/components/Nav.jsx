@@ -39,7 +39,7 @@ function Nav() {
           {isLoggedIn ? (
             <>
               <li onClick={handleLogout} className="button">
-                <Link to="/"> Logout</Link>{" "}
+                 Logout
               </li>
               <button
                 type="submit"
