@@ -115,7 +115,7 @@ function DonationForm() {
             transition-colors
             duration-150
             focus:shadow-outline
-            hover:bg-indigo-800
+            hover:bg-gray-600
           "
             >
               Donate
